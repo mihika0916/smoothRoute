@@ -252,17 +252,19 @@ OR-Tools is installed as any compatible `9.x` release. Hosting platforms may use
 Start the backend:
 
 ```bash
-cd smoothroute/backend
+cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
+For hosted deployments, the backend is pinned to Python `3.11.9` in `backend/runtime.txt`. This avoids Python pre-release/new-runtime package wheel issues on hosts that default to very new Python versions.
+
 Start the frontend:
 
 ```bash
-cd smoothroute/frontend
+cd frontend
 npm install
 npm run dev -- --host 127.0.0.1 --port 5174
 ```
