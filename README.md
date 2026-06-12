@@ -245,6 +245,8 @@ Routing and algorithms:
 - manual Clarke-Wright solver
 - OR-Tools VRPTW solver
 
+OR-Tools is installed as any compatible `9.x` release. Hosting platforms may use different Python versions, and OR-Tools wheel availability depends on Python version.
+
 ## Run Locally
 
 Start the backend:
